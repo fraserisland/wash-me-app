@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @washer.user %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @washer.cost %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @washer.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @washer.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @washer.longitude %>
+</p>
+
+<p>Nearby Locations</p>
+
+<ul>
+  <% @washer.nearbys(10).each do |near_washer| %>
+    <li><%= link_to near_washer.address%> (<%= near_washer.distance.round(2)%> kms)</li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_washer_path(@washer) %> |
+<%= link_to 'Back', washers_path %>
