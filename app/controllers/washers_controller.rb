@@ -25,7 +25,7 @@ class WashersController < ApplicationController
   # POST /washers.json
   def create
     @washer = Washer.new(washer_params)
-    @washer.user = current_user
+    @washer.user= current_user
     respond_to do |format|
       if @washer.save
         format.html { redirect_to @washer, notice: 'Washer was successfully created.' }
@@ -69,6 +69,6 @@ class WashersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def washer_params
-      params.require(:washer).permit(:user_id, :cost, :address, :latitude, :longitude)
+      params.require(:washer).permit(:user_id, :cost, :address, :latitude, :longitude, :first_name, :last_name)
     end
 end
