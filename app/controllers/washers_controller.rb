@@ -13,9 +13,10 @@ class WashersController < ApplicationController
 
   def near_you
     @washers = Washer.all
-    @location = Geocoder.search(params[:location])
+
     if params[:location].present?
       @washers = Washer.near(params[:location], params[:distance])
+      @location = Geocoder.search(params[:location])
     else
       @washers = Washer.all
     end
