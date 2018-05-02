@@ -1,6 +1,9 @@
 The washers near you:
 
+
+
 <table>
+  <% if @washers.present? %>
   <thead>
     <tr>
       <th>Washer</th>
@@ -28,6 +31,9 @@ The washers near you:
     <% end %>
   </tbody>
 </table>
+<% else %>
+    <p>No nearby washers! Sorry, try a differnent location.</p>
+<% end %>
 
 <style>
     /* Always set the map height explicitly to define the size of the div
@@ -54,7 +60,9 @@ The washers near you:
         mapTypeId: 'roadmap'
       });
 
-      var features = [
+      var features = [{
+            position: new google.maps.LatLng(<%= @location[0].latitude %>, <%= @location[0].longitude%>),
+            type: 'info' },
        <% @washers.each do |washer| %>
         {
           position: new google.maps.LatLng(<%= washer.latitude %>,<%= washer.longitude %>),

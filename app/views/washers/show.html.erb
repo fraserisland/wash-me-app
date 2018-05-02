@@ -18,7 +18,7 @@
 <p>
   <% if @washer.image.present? %>
   <strong>Image:</strong>
-  <%= image_tag(@washer.image.url) %><br />
+  <%= image_tag(@washer.image.url, :gravity=>"face", :height=>150, :crop=>"thumb") %><br />
   <% end %>
 </p>
 
@@ -33,9 +33,9 @@
 
 <% if @washer.nearbys(10).size > 0 %>
       <ul>
-        <p>Nearby Locations</p>
+        <p>Other Nearby Locations</p>
         <% @washer.nearbys(10).each do |near_washer| %>
-          <li><%= link_to near_washer.address%> (<%= near_washer.distance.round(2)%> kms)</li>
+          <li><%= link_to near_washer.address, near_washer%> (<%= near_washer.distance.round(2)%> kms)</li>
         <% end %>
       </ul>
   <% else %>
