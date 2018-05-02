@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @washer.user %>
+  <%= @washer.user.first_name %> <%= @washer.user.last_name %>
 </p>
 
 <p>
@@ -12,26 +12,35 @@
 
 <p>
   <strong>Address:</strong>
-  <%= @washer.address %>
+  <%= @washer.full_address %>
 </p>
 
 <p>
-  <strong>Latitude:</strong>
-  <%= @washer.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @washer.longitude %>
-</p>
-
-<p>Nearby Locations</p>
-
-<ul>
-  <% @washer.nearbys(10).each do |near_washer| %>
-    <li><%= link_to near_washer.address%> (<%= near_washer.distance.round(2)%> kms)</li>
+  <% if @washer.image.present? %>
+  <strong>Image:</strong>
+  <%= image_tag(@washer.image.url) %><br />
   <% end %>
-</ul>
+</p>
+
+
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmo1j47I6KO4QRYJl_Z8PiSat_VhfWHnk&q=<%=@washer.full_address %>" allowfullscreen>
+</iframe>
+
+
+<% if @washer.nearbys(10).size > 0 %>
+      <ul>
+        <p>Nearby Locations</p>
+        <% @washer.nearbys(10).each do |near_washer| %>
+          <li><%= link_to near_washer.address%> (<%= near_washer.distance.round(2)%> kms)</li>
+        <% end %>
+      </ul>
+  <% else %>
+      <p>No nearby washers! Sorry, try a differnent location.</p>
+<% end %>
 
 
 <%= link_to 'Edit', edit_washer_path(@washer) %> |

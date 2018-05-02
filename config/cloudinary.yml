@@ -1,0 +1,19 @@
+
+development:
+  cloud_name: fraserisland
+  api_key: '357465559721223'
+  api_secret: 7XnGxWF7DJhBu4dMN-6q3cFDi10
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: fraserisland
+  api_key: '357465559721223'
+  api_secret: 7XnGxWF7DJhBu4dMN-6q3cFDi10
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: fraserisland
+  api_key: '357465559721223'
+  api_secret: 7XnGxWF7DJhBu4dMN-6q3cFDi10
+  enhance_image_tag: true
+  static_image_support: false

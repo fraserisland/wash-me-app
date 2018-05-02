@@ -66,3 +66,8 @@ gem "pg", "~> 1.0"
 gem "devise", "~> 4.4"
 
 gem "geocoder"
+gem 'carrierwave'
+gem 'cloudinary'
+
+# Added at 2018-05-02 19:24:00 +1000 by frasermaccy:
+gem "ratyrate", "~> 1.2.alpha"

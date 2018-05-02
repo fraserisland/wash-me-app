@@ -1,6 +1,5 @@
 class WashersController < ApplicationController
   before_action :set_washer, only: [:show, :edit, :update, :destroy]
-
   # GET /washers
   # GET /washers.json
   def index
@@ -10,6 +9,16 @@ class WashersController < ApplicationController
   # GET /washers/1
   # GET /washers/1.json
   def show
+  end
+
+  def near_you
+    @washers = Washer.all
+    @location = Geocoder.search(params[:location])
+    if params[:location].present?
+      @washers = Washer.near(params[:location], params[:distance])
+    else
+      @washers = Washer.all
+    end
   end
 
   # GET /washers/new
@@ -69,6 +78,6 @@ class WashersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def washer_params
-      params.require(:washer).permit(:user_id, :cost, :address, :latitude, :longitude, :first_name, :last_name)
+      params.require(:washer).permit(:image, :user_id, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :first_name, :last_name)
     end
 end

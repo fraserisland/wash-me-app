@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
   def index
-  end 
+    @washers = Washer.all
+  end
 end
