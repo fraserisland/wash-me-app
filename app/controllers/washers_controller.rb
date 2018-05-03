@@ -79,6 +79,6 @@ class WashersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def washer_params
-      params.require(:washer).permit(:image, :user_id, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :first_name, :last_name)
+      params.require(:washer).permit(:image, :user_id, :description, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :first_name, :last_name)
     end
 end

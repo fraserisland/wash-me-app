@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   get 'washers/near_you', to: 'washers#near_you'
   resources :washers
   devise_for :users

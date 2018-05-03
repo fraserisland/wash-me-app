@@ -1,38 +1,33 @@
 The washers near you:
 
 
-
-<table>
-  <% if @washers.present? %>
-  <thead>
-    <tr>
-      <th>Washer</th>
-      <th>Cost</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @washers.each do |washer| %>
+<% if @washers.present? %>
+  <table>
+    <thead>
       <tr>
-        <td><%= washer.user.first_name %> <%= washer.user.last_name %></td>
-        <td>$<%= washer.cost %></td>
-        <td><%= washer.full_address %></td>
-
-        <% if @location.present? %>
-          <td><%= @location[0].latitude %> <%=@location[0].longitude%></td>
-        <% end %>
-
-        <td><%= link_to 'Show', washer %></td>
-        <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
-        <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Washer</th>
+        <th>Cost(kg)</th>
+        <th>Address</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<% else %>
-    <p>No nearby washers! Sorry, try a differnent location.</p>
+    </thead>
+
+    <tbody>
+      <% @washers.each do |washer| %>
+        <tr>
+          <td><%= washer.user.first_name %> <%= washer.user.last_name %></td>
+          <td>$<%= washer.cost %></td>
+          <td><%= washer.full_address %></td>
+          <td><%= link_to 'Details', washer %></td>
+          <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
+          <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <% else %>
+      <p>No nearby washers! Sorry, try a differnent location.</p>
 <% end %>
 
 <style>

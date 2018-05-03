@@ -42,6 +42,11 @@
     <%= form.text_field :country %>
   </div>
 
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, :cols => "50", :rows => "9" %>
+  </div>
+
   <div class="">
     <%= form.file_field :image %>
   </div>
