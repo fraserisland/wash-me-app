@@ -9,16 +9,14 @@ class WashersController < ApplicationController
   # GET /washers/1
   # GET /washers/1.json
   def show
+    @washer = Washer.find(params[:id])
   end
 
   def near_you
     @washers = Washer.all
-
     if params[:location].present?
       @washers = Washer.near(params[:location], params[:distance])
       @location = Geocoder.search(params[:location])
-    else
-      @washers = Washer.all
     end
   end
 
