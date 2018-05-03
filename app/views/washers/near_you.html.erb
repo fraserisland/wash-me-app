@@ -19,7 +19,7 @@ The washers near you:
           <td><%= washer.user.first_name %> <%= washer.user.last_name %></td>
           <td>$<%= washer.cost %></td>
           <td><%= washer.full_address %></td>
-          <td><%= washer.rating %></td>
+          <td><%=rating_for washer, "experience" %></td>
           <td><%= link_to 'Details', washer %></td>
           <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
           <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
