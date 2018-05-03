@@ -1,6 +1,6 @@
 class Washer < ApplicationRecord
   belongs_to :user
-  ratyrate_rateable "cleanliness", "reliability"
+  ratyrate_rateable "experience"
 
   geocoded_by :full_address
   after_validation :geocode, :if => :address_changed?

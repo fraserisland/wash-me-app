@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2018_05_03_001152) do
     t.string "city"
     t.string "country"
     t.string "image"
-    t.string "desription"
+    t.string "description"
     t.index ["user_id"], name: "index_washers_on_user_id"
   end
 

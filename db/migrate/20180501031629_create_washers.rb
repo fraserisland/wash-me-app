@@ -6,8 +6,7 @@ class CreateWashers < ActiveRecord::Migration[5.2]
       t.string :address
       t.float :latitude
       t.float :longitude
-      add_column :washers, :description, :string
-
+      
       t.timestamps
     end
   end
