@@ -6,6 +6,10 @@ class CreateWashers < ActiveRecord::Migration[5.2]
       t.string :address
       t.float :latitude
       t.float :longitude
+      add_column :washers, :zipcode, :string
+      add_column :washers, :city, :string
+      add_column :washers, :country, :string
+      add_column :washers, :image, :string
       add_column :washers, :description, :string
 
       t.timestamps
