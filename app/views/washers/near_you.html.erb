@@ -17,7 +17,11 @@ The washers near you:
     <tbody>
       <% @washers.each do |washer| %>
         <tr>
-          <td><%= image_tag(washer.image.url(:thumb)) %></td>
+          <% if washer.user.avatar.present? %>
+            <td>
+            <%= image_tag(washer.user.avatar.url(:thumb)) %><br />
+            </td>
+            <% end %>
           <td><%= washer.user.first_name %> <%= washer.user.last_name %></td>
           <td>$<%= washer.cost %></td>
           <td><%= washer.full_address %></td>
@@ -89,7 +93,8 @@ The washers near you:
        <% @washers.each do |washer| %>
         {
           position: new google.maps.LatLng(<%= washer.latitude %>,<%= washer.longitude %>),
-          type: 'info'
+          type: 'info',
+          url: '/washers/<%= washer.id %>'
         },
         <% end %>
       ];
@@ -105,7 +110,12 @@ The washers near you:
           map: map,
           icon: icons['info'].icon,
         });
-        infowindow.open(map, marker);
+
+        marker.addListener('click', function() {
+          if (feature.url){
+            window.location = feature.url
+          }
+        });
       });
     }
   </script>

@@ -6,6 +6,13 @@
 </p>
 
 <p>
+  <strong>Profile Image:</strong>
+  <% if @washer.user.avatar.present? %>
+  <%= image_tag(@washer.user.avatar.url, :crop=>"thumb") %><br />
+  <% end %>
+</p>
+
+<p>
   <strong>Cost:</strong>
   <%= @washer.cost %>
 </p>
@@ -27,7 +34,7 @@
 
 <p>
   <% if @washer.image.present? %>
-  <strong>Image:</strong>
+  <strong>Washer Image:</strong>
   <%= image_tag(@washer.image.url, :gravity=>"face", :height=>150, :crop=>"thumb") %><br />
   <% end %>
 </p>
