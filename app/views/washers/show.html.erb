@@ -8,7 +8,7 @@
 <p>
   <strong>Profile Image:</strong>
   <% if @washer.user.avatar.present? %>
-  <%= image_tag(@washer.user.avatar.url, :crop=>"thumb") %><br />
+  <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
   <% end %>
 </p>
 
@@ -20,6 +20,11 @@
 <p>
   <strong>Address:</strong>
   <%= @washer.full_address %>
+</p>
+
+<p>
+  <strong>Pickup/Deliver:</strong>
+  <%= @washer.delivery %>
 </p>
 
 <p>
@@ -35,7 +40,7 @@
 <p>
   <% if @washer.image.present? %>
   <strong>Washer Image:</strong>
-  <%= image_tag(@washer.image.url, :gravity=>"face", :height=>150, :crop=>"thumb") %><br />
+  <%= image_tag(@washer.image.url(:medium)) %> <br />
   <% end %>
 </p>
 

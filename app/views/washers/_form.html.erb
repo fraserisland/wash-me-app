@@ -18,7 +18,7 @@
 
 
   <div class="field">
-    <%= form.label :cost %>
+    <%= form.label :cost, 'Cost per kg' %>
     <%= form.text_field :cost %>
   </div>
 
@@ -43,13 +43,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description, 'Extra services' %>
     <%= form.text_area :description, :cols => "50", :rows => "9" %>
   </div>
 
-  <div class="">
+  <div class="field">
     <%= form.file_field :image %>
   </div>
+
+
+  <div class="field">
+  <%= "Do you offer a Pickup/ Delivery service?" %><br>
+  <p><%= form.radio_button :delivery, "Yes!" %> True </p>
+  <p><%= form.radio_button :delivery, "No." %> False </p>
+  </div>
+
+
   <!-- <div class="field">
     <%= form.label :latitude %>
     <%= form.text_field :latitude %>
