@@ -1,5 +1,7 @@
 class Washer < ApplicationRecord
-  
+  validates_presence_of :cost, :numericality => { :greater_than_or_equal_to => 0 }
+  validates_presence_of :address, :city, :country, :zipcode, :delivery
+
   resourcify
 
   belongs_to :user

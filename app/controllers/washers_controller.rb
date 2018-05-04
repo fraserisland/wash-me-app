@@ -13,7 +13,7 @@ class WashersController < ApplicationController
   end
 
   def near_you
-    @washers = Washer.all
+      @washers = Washer.all
     if params[:location].present?
       @washers = Washer.near(params[:location], params[:distance])
       @location = Geocoder.search(params[:location])
@@ -77,6 +77,6 @@ class WashersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def washer_params
-      params.require(:washer).permit(:image, :user_id, :description, :delivery, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :first_name, :last_name)
+      params.require(:washer).permit(:image, :user_id, :description, :delivery, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :email, :first_name, :last_name)
     end
 end

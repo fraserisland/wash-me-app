@@ -9,7 +9,7 @@
   <strong>Profile Image:</strong>
   <% if @washer.user.avatar.present? %>
       <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
-    <%else%>
+    <% else %>
       <%= cl_image_tag("profile-blank.png")%>
   <% end %>
 </p>
@@ -36,33 +36,32 @@
   <% end %>
 </p>
 
-<p>
+<p style= "display: none">
 <% if current_user == @washer.user %>
   <% else %>
     <strong>Experience:</strong>
-      <%= rating_for @washer, "experience"%>
+      <%= rating_for @washer, "experience", half_show: true%>
 <% end %>
 </p>
-
 
 <p>
   <strong>Washer Image:</strong>
   <% if @washer.image.present? %>
-    <%= image_tag(@washer.image.url(:medium)) %> <br/>
+      <%= image_tag(@washer.image.url(:medium)) %> <br/>
     <%else%>
-    <%= "none available" %>
+      <%= "none available" %>
   <% end %>
 </p>
 
 <div>
   <h3>Contact <%= @washer.user.first_name.capitalize %></h3>
-  <p>Email: <%= %></p>
-  <p>Phone: <%= %></p>
+  <p>Email: <%= @washer.user.email %></p>
+  <p>Phone: <%= "phone number go here" %></p>
 </div>
 
 <% if @washer.nearbys(10).present? %>
       <ul>
-        <p>Other Nearby Washers:</p>
+        <strong>Other Nearby Washers:</strong>
         <% @washer.nearbys(10).each do |near_washer| %>
           <li><%= link_to near_washer.address, near_washer%> (<%= near_washer.distance.round(2)%> kms)</li>
         <% end %>
