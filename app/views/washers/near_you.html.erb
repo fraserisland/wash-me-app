@@ -84,12 +84,15 @@ The washers near you:
            var icons = {
              info: {
                icon: '/washer.png'
+             },
+             you: {
+               icon:'/dirty-washing.png'
              }
            };
 
       var features = [{
             position: new google.maps.LatLng(<%= @location[0].latitude %>, <%= @location[0].longitude%>),
-            type: 'info' },
+            type: 'you' },
        <% @washers.each do |washer| %>
         {
           position: new google.maps.LatLng(<%= washer.latitude %>,<%= washer.longitude %>),
@@ -105,10 +108,11 @@ The washers near you:
         var infowindow = new google.maps.InfoWindow({
        content: contentString
          });
+
         var marker = new google.maps.Marker({
           position: feature.position,
           map: map,
-          icon: icons['info'].icon,
+          icon: icons[feature.type].icon,
         });
 
         marker.addListener('click', function() {
@@ -122,58 +126,3 @@ The washers near you:
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmo1j47I6KO4QRYJl_Z8PiSat_VhfWHnk&callback=initMap">
   </script>
-
-<!--
-<p>Map:</p>
-
-<style>
-  #map {
-    height: 100%;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-</style>
-<div id="map"></div>
- <script>
- function initMap(){}
-   var map;
-   function map(lat, long) {
-     map = new google.maps.Map(document.getElementById('map'), {
-       zoom: 15,
-       center: new google.maps.LatLng(lat, long),
-       mapTypeId: 'roadmap'
-     });
-
-     var features = [
-      <% @washers.each do |washer| %>
-       {
-         position: new google.maps.LatLng(<%= washer.latitude %>,<%= washer.longitude %>),
-         type: 'info'
-       },
-       <% end %>
-     ];
-
-     features.forEach(function(feature) {
-       var marker = new google.maps.Marker({
-         position: feature.position,
-         map: map
-       });
-     });
-   }
-  //
-  //  if (navigator.geolocation) {
-  //    console.log("yes")
-  //    navigator.geolocation.getCurrentPosition(function(position) {
-  //      console.log(position)
-  //      map(position.coords.latitude, position.coords.longitude)
-  //    });
-  // }
-
- </script>
- <script async defer
- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmo1j47I6KO4QRYJl_Z8PiSat_VhfWHnk&callback=initMap">
- </script> -->

@@ -8,7 +8,9 @@
 <p>
   <strong>Profile Image:</strong>
   <% if @washer.user.avatar.present? %>
-  <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
+      <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
+    <%else%>
+      <%= cl_image_tag("profile-blank.png")%>
   <% end %>
 </p>
 
@@ -28,19 +30,25 @@
 </p>
 
 <p>
-  <strong>Notes:</strong>
-  <%= @washer.description %>
+  <% if @washer.description.present? %>
+    <strong>Notes:</strong>
+    <%= @washer.description %> <br />
+  <% end %>
 </p>
 
 <p>
-  <strong>Experience:</strong>
-  <%= rating_for @washer, "experience" %>
+<% if current_user == @washer.user %>
+  <% else %>
+    <strong>Experience:</strong>
+      <%= rating_for @washer, "experience"%>
+<% end %>
 </p>
+
 
 <p>
   <% if @washer.image.present? %>
-  <strong>Washer Image:</strong>
-  <%= image_tag(@washer.image.url(:medium)) %> <br />
+    <strong>Washer Image:</strong>
+    <%= image_tag(@washer.image.url(:medium)) %> <br />
   <% end %>
 </p>
 
