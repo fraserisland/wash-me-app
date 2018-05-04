@@ -23,8 +23,10 @@
         <td>$<%= washer.cost %></td>
         <td><%= washer.full_address %></td>
         <td><%= link_to 'Details', washer %></td>
-        <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
-        <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.can_update?(washer)%>
+            <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
+            <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
