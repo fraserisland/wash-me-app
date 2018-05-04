@@ -71,3 +71,6 @@ gem 'cloudinary'
 
 # Added at 2018-05-02 19:24:00 +1000 by frasermaccy:
 gem "ratyrate", "~> 1.2.alpha"
+
+# Added at 2018-05-04 15:31:29 +1000 by frasermaccy:
+gem "rolify", "~> 5.2"

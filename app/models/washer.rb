@@ -1,4 +1,7 @@
 class Washer < ApplicationRecord
+  
+  resourcify
+
   belongs_to :user
   ratyrate_rateable "experience"
 
