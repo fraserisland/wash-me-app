@@ -1,6 +1,6 @@
 <h1>WASH ME</h1>
 
-
+<body style= "text-align: center" >
   <%= form_tag washers_near_you_path, method: :get do %>
   <%= label :location, "search anywhere:" %>
   <%= text_field_tag :location, params[:location] %>
@@ -11,3 +11,4 @@
   <%= submit_tag "Search!" %>
 
   <% end %>
+</body>

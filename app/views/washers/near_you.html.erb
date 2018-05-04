@@ -91,7 +91,7 @@ The washers near you:
            };
 
       var features = [{
-            position: new google.maps.LatLng(<%= @location[0].latitude %>, <%= @location[0].longitude%>),
+            position: new google.maps.LatLng(<%= @location[0].latitude %>, <%= @location[0].longitude %>),
             type: 'you' },
        <% @washers.each do |washer| %>
         {

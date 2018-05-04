@@ -46,24 +46,23 @@
 
 
 <p>
+  <strong>Washer Image:</strong>
   <% if @washer.image.present? %>
-    <strong>Washer Image:</strong>
-    <%= image_tag(@washer.image.url(:medium)) %> <br />
+    <%= image_tag(@washer.image.url(:medium)) %> <br/>
+    <%else%>
+    <%= "none available" %>
   <% end %>
 </p>
 
+<div>
+  <h3>Contact <%= @washer.user.first_name.capitalize %></h3>
+  <p>Email: <%= %></p>
+  <p>Phone: <%= %></p>
+</div>
 
-<iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmo1j47I6KO4QRYJl_Z8PiSat_VhfWHnk&q=<%=@washer.full_address %>" allowfullscreen>
-</iframe>
-
-
-<% if @washer.nearbys(10).size > 0 %>
+<% if @washer.nearbys(10).present? %>
       <ul>
-        <p>Other Nearby Locations</p>
+        <p>Other Nearby Washers:</p>
         <% @washer.nearbys(10).each do |near_washer| %>
           <li><%= link_to near_washer.address, near_washer%> (<%= near_washer.distance.round(2)%> kms)</li>
         <% end %>
