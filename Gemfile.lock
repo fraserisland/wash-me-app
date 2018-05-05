@@ -113,6 +113,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.0)
       mini_mime (>= 0.1.1)
+    mailboxer (0.15.1)
+      carrierwave (>= 0.5.8)
+      rails (>= 5.0.0)
     marcel (0.3.2)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
@@ -242,6 +245,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  mailboxer (~> 0.15.1)
   pg (~> 1.0)
   puma (~> 3.11)
   rails (~> 5.2.0)

@@ -74,3 +74,6 @@ gem "ratyrate", "~> 1.2.alpha"
 
 # Added at 2018-05-05 13:06:34 +1000 by frasermaccy:
 gem "rolify", "~> 5.2"
+
+# Added at 2018-05-05 13:57:46 +1000 by frasermaccy:
+gem "mailboxer", "~> 0.15.1"
