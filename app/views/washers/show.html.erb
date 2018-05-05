@@ -55,8 +55,8 @@
 
 <div>
   <h3>Contact <%= @washer.user.first_name.capitalize %></h3>
+  <p>Message <%= @washer.user.first_name.capitalize %> <%= link_to 'New Message', new_conversation_path %></p>
   <p>Email: <%= @washer.user.email %></p>
-  <p>Phone: <%= "phone number go here" %></p>
 </div>
 
 <% if @washer.nearbys(10).present? %>

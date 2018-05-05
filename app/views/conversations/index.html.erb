@@ -1,8 +1,14 @@
-<h1>all convos</h1>
+<h1>All Messages</h1>
 
 
-<% @conversations.each do |conversation| %>
-<div>
-  <%= link_to conversation.subject, conversation_path(conversation) %>
-</div>
+<% if @conversations.present? %>
+  <% @conversations.each do |conversation| %>
+  <div>
+    <%= link_to conversation.subject, conversation_path(conversation) %>
+  </div>
+  <% end %>
+  <% else %>
+  <p>no messages</p>
 <% end %>
+
+<%= link_to "New Message", new_conversation_path %>
