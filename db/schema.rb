@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 2018_05_04_053241) do
 
   create_table "washers", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "cost"
+    t.float "cost"
     t.string "address"
     t.float "latitude"
     t.float "longitude"
