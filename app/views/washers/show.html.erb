@@ -59,6 +59,12 @@
   <p>Email: <%= @washer.user.email %></p>
 </div>
 
+<div>
+  <h3>Pay <%= @washer.user.first_name.capitalize %></h3>
+    <%= link_to 'Send money', new_charge_path %>
+    <br>
+</div>
+
 <% if @washer.nearbys(10).present? %>
       <ul>
         <strong>Other Nearby Washers:</strong>
@@ -69,5 +75,4 @@
 <% end %>
 
 
-<%= link_to 'Edit', edit_washer_path(@washer) %> |
-<%= link_to 'Back', washers_path %>
+<%= link_to 'Go Back', washers_path %>

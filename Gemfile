@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.4'
 
+gem 'dotenv-rails', groups: [:development, :test]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use Puma as the app server
@@ -77,3 +78,9 @@ gem "rolify", "~> 5.2"
 
 # Added at 2018-05-05 13:57:46 +1000 by frasermaccy:
 gem "mailboxer", "~> 0.15.1"
+
+# Added at 2018-05-06 12:45:10 +1000 by frasermaccy:
+gem "stripe", "~> 3.13"
+
+# Added at 2018-05-06 17:13:22 +1000 by frasermaccy:
+gem "bootstrap-sass", "~> 3.3"
