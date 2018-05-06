@@ -15,17 +15,19 @@
 
   <body>
   <% if user_signed_in? %>
-      <p><%= link_to('Logout', destroy_user_session_path, method: :delete) %></p>
+      <p><%= link_to('Edit Profile', edit_user_registration_path) %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete) %></p>
     <% else %>
       <p><%= link_to('Login', new_user_session_path)  %> </p>
   <% end %>
   <% if user_signed_in? %>
-      <p><%= link_to('Edit Profile', edit_user_registration_path) %></p>
+      <p><%= link_to 'Messages', conversations_path %>
+      <%= link_to 'All Washers', washers_path %></p>
     <% else %>
       <p><%= link_to('Register', new_user_registration_path) %></p>
   <% end %>
-    <%= link_to 'Messages', conversations_path %>
-    <%= link_to 'All Washers', washers_path %>
+
+
     <%= link_to 'Home', root_path %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

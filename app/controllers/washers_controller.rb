@@ -9,6 +9,7 @@ class WashersController < ApplicationController
   # GET /washers/1
   # GET /washers/1.json
   def show
+    @washers= Washer.all
     @washer = Washer.find(params[:id])
   end
 

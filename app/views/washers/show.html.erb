@@ -16,7 +16,7 @@
 
 <p>
   <strong>Cost:</strong>
-  <%= @washer.cost %>
+  $<%= @washer.cost %> per kg
 </p>
 
 <p>
@@ -55,7 +55,7 @@
 
 <div>
   <h3>Contact <%= @washer.user.first_name.capitalize %></h3>
-  <p>Message <%= @washer.user.first_name.capitalize %> <%= link_to 'New Message', new_conversation_path %></p>
+  <p>Message <%= link_to @washer.user.first_name.capitalize, new_conversation_path(:recipient => @washer.user) %></p>
   <p>Email: <%= @washer.user.email %></p>
 </div>
 
@@ -63,11 +63,9 @@
       <ul>
         <strong>Other Nearby Washers:</strong>
         <% @washer.nearbys(10).each do |near_washer| %>
-          <li><%= link_to near_washer.address, near_washer%> (<%= near_washer.distance.round(2)%> kms)</li>
+          <li><%= link_to near_washer.address, near_washer %> (<%= near_washer.distance.round(2)%> kms)</li>
         <% end %>
       </ul>
-  <% else %>
-      <p>No nearby washers! Sorry, try a differnent location.</p>
 <% end %>
 
 

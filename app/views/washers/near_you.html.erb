@@ -8,6 +8,7 @@ The washers near you:
         <th>Washer</th>
         <th>Cost(kg)</th>
         <th>Address</th>
+        <th>Distance</th>
         <th>Rating</th>
         <th colspan="3"></th>
       </tr>
@@ -16,15 +17,16 @@ The washers near you:
     <tbody>
       <% @washers.each do |washer| %>
         <tr>
+
           <% if washer.user.avatar.present? %>
-            <td>
-            <%= image_tag(washer.user.avatar.url(:thumb)) %><%= washer.user.first_name %> <%= washer.user.last_name %><br />
-            </td>
+              <td><%= image_tag(washer.user.avatar.url(:thumb)) %><%= washer.user.first_name %> <%= washer.user.last_name %><br /></td>
             <% else %>
               <td><%= washer.user.first_name %> <%= washer.user.last_name %></td>
-            <% end %>
+          <% end %>
+
           <td>$<%= washer.cost %></td>
           <td><%= washer.full_address %></td>
+          <td><%= washer.distance.round(2) %> km</td>
 
           <% if current_user == washer.user %>
               <td>your rating</td>
