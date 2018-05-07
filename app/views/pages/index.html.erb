@@ -1,14 +1,18 @@
-<h1>WASH ME</h1>
 
-<body style= "text-align: center" >
+<h1 class= "text-secondary">WASH ME</h1>
+
+<body>
+
+<div class="form-row text-secondary" >
   <%= form_tag washers_near_you_path, method: :get do %>
-  <%= label :location, "search anywhere:" %>
-  <%= text_field_tag :location, params[:location] %>
+  <%= label :location, "Search anywhere:"%>
+  <%= text_field_tag :location, params[:location], class: "form-control" %>
 
   <%= label :distance, "Distance(kms): " %>
-  <%= select_tag :distance , options_for_select([10, 20, 50, 100]) %>
-
-  <%= submit_tag "Search!" %>
-
+  <%= select_tag :distance , options_for_select([20, 50, 100, 200]), class: 'form-control' %>
+  <br>
+  <%= submit_tag "Search!", class: "btn btn-outline-secondary" %>
   <% end %>
+</div>
+
 </body>

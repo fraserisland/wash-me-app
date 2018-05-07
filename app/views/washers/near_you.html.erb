@@ -1,8 +1,14 @@
-The washers near you:
+<script type="text/javascript">
+	$(document).ready(function(){
+    $(".readonly-star .star").each(function() {
+      $(this).raty('set', { readOnly: true });
+    });
+  });
+</script>
 
-
+<body style="margin: 33px">
 <% if @washers.present? %>
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>Washer</th>
@@ -29,22 +35,24 @@ The washers near you:
           <td><%= washer.distance.round(2) %> km</td>
 
           <% if current_user == washer.user %>
-              <td>your rating</td>
+          <td class="readonly-star"> <%= rating_for washer, "experience"%></td>
             <% else %>
-              <td> <%= rating_for washer, "experience"%></td>
+              <td class="readonly-star"> <%= rating_for washer, "experience"%></td>
           <% end %>
 
           <td><%= link_to 'Details', washer %></td>
-          <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
-          <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+					<% if current_user.can_update?(washer)%>
+	          <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
+	          <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					<% end %>
+				</tr>
         <% end %>
     </tbody>
   </table>
   <% else %>
       <p>No nearby washers! Sorry, try a differnent location.</p>
 <% end %>
-
+</body>
 <style>
     /* Always set the map height explicitly to define the size of the div
      * element that contains the map. */
