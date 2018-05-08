@@ -18,6 +18,9 @@ class WashersController < ApplicationController
     if params[:location].present?
       @washers = Washer.near(params[:location], params[:distance])
       @location = Geocoder.search(params[:location])
+      else
+        redirect_to root_path
+        flash[:notice] = "Please enter valid address."
     end
   end
 

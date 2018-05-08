@@ -136,6 +136,7 @@
           position: feature.position,
           map: map,
           icon: icons[feature.type].icon,
+					animation: google.maps.Animation.DROP
         });
 
         marker.addListener('click', function() {
