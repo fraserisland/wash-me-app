@@ -15,3 +15,5 @@
 //= require_tree .
 //= require jquery.raty
 //= require ratyrate
+//= require jquery_ujs
+//= require gmaps-auto-complete

@@ -84,3 +84,7 @@ gem "stripe", "~> 3.13"
 
 # Added at 2018-05-06 17:13:22 +1000 by frasermaccy:
 gem "bootstrap-sass", "~> 3.3"
+
+gem 'jquery-rails'
+
+gem 'gmaps-autocomplete-rails'

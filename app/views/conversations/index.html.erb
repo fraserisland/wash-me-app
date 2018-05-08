@@ -2,13 +2,19 @@
 
 
 <% if @conversations.present? %>
+
   <% @conversations.each do |conversation| %>
   <div>
-    <%= link_to conversation.subject, conversation_path(conversation) %>
+    <% if conversation.recipients.first == current_user %>
+      <p><%= conversation.recipients.last.first_name.capitalize %>:</p>
+      <% else %>
+        <p><%= conversation.recipients.first.first_name.capitalize %>:</p>
+    <% end %>
+
+    <p><%= link_to conversation.subject, conversation_path(conversation) %></p>
+    
   </div>
   <% end %>
   <% else %>
   <p>no messages</p>
 <% end %>
-
-<%= link_to "New Message", new_conversation_path %>

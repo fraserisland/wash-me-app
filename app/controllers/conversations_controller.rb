@@ -1,9 +1,7 @@
 class ConversationsController < ApplicationController
 
   def index
-    if @conversations.present?
       @conversations = current_user.mailbox.conversations
-    end
   end
 
   def show
@@ -11,13 +9,13 @@ class ConversationsController < ApplicationController
   end
 
   def new
-    @recipients = User.all - [current_user]
+    @recipient = User.find(params[:recipient_id])
   end
 
   def create
-    @recipients = User.find(params[:user_id])
-    receipt = current_user.send_message(recipient, params[:body], params[:subject])
-    redirect_to conversation_path(recipt.conversation)
+    @recipients = User.find(params[:recipient])
+    receipt = current_user.send_message(@recipients, params[:body], params[:subject])
+    redirect_to conversation_path(receipt.conversation)
   end
 
 end
