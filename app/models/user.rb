@@ -31,5 +31,9 @@ class User < ApplicationRecord
     self.has_role?(:admin) or (self.has_role?(:customer) && washer.user == self)
   end
 
+  def admin_only
+    self.has_role?(:admin)
+  end
+
 
 end

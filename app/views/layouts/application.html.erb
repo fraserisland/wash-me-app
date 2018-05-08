@@ -27,20 +27,18 @@
     <div class="collapse" id="navbarToggleExternalContent">
       <div class="bg-light" style="text-align: center">
 
+
+            <%= link_to 'Home', root_path, class: "btn btn-outline-secondary" %>
           <% if user_signed_in? %>
+            <%= link_to 'Messages', conversations_path, class: "btn btn-outline-secondary margin"%>
               <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-outline-secondary margin" %>
               <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-outline-secondary margin" %>
             <% else %>
+              <%= link_to 'Register', new_user_registration_path, class: "btn btn-outline-secondary" %>
               <%= link_to 'Login', new_user_session_path, class: "btn btn-outline-secondary margin"%>
           <% end %>
-          <% if user_signed_in? %>
-              <%= link_to 'Messages', conversations_path, class: "btn btn-outline-secondary margin"%>
-              <%= link_to 'All Washers', washers_path, class: "btn btn-outline-secondary" %>
-            <% else %>
-              <%= link_to 'Register', new_user_registration_path, class: "btn btn-outline-secondary" %>
-          <% end %>
 
-            <%= link_to 'Home', root_path, class: "btn btn-outline-secondary" %>
+            <%= link_to 'All Washers', washers_path, class: "btn btn-outline-secondary" if current_user.has_role?(:admin) %>
       </div>
     </div>
 
