@@ -42,9 +42,9 @@
           <td><%= washer.distance.round(2) %> km</td>
 
           <% if current_user == washer.user %>
-          <td class="readonly-star"> <%= rating_for washer, "experience"%></td>
+          <td class="readonly-star"> <%= rating_for washer, "experience", star_path: '/images/ratyrate'%></td>
             <% else %>
-              <td class="readonly-star"> <%= rating_for washer, "experience"%></td>
+              <td class="readonly-star"> <%= rating_for washer, "experience", star_path: '/images/ratyrate'%></td>
           <% end %>
 
           <td><%= link_to 'Details', washer %></td>
