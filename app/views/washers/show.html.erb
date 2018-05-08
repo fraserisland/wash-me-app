@@ -40,7 +40,7 @@
 <% if current_user == @washer.user %>
   <% else %>
     <strong>Experience:</strong>
-      <%= rating_for @washer, "experience", half_show: true%>
+      <%= rating_for @washer, "experience", half_show: true, star_path: '/raty' %>
 <% end %>
 </p>
 
