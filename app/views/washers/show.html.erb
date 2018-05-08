@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -40,7 +41,7 @@
 <% if current_user == @washer.user %>
   <% else %>
     <strong>Experience:</strong>
-      <%= rating_for @washer, "experience", half_show: true, star_path: '/raty' %>
+      <%= rating_for @washer, "experience", disable_after_rate: true, star_path: '/raty' %>
 <% end %>
 </p>
 
