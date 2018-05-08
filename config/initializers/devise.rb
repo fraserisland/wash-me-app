@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'd944268d7d7094fe3667129dd72e5ed3b228ccf06097bebfeeab83d0f8762e79a48d021d386fb9c13a881057aad2c07436aa76410c8b80b7f5594fe89ac80e58'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -266,6 +266,9 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
+
+  config.secret_key = '92f10e181c1709949fdcca0c4f3efb2ca93df710d6ce6a69a25f28431cd40272f30cb45cecf854ba4cac652e35ce8dde625024484f8bb18e023f249a8345e5b7'
+
 
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
