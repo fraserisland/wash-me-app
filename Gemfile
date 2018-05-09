@@ -88,3 +88,5 @@ gem "bootstrap-sass", "~> 3.3"
 gem 'jquery-rails'
 
 gem 'gmaps-autocomplete-rails'
+
+gem 'rails_12factor', group: :production
