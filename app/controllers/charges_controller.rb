@@ -1,9 +1,12 @@
 class ChargesController < ApplicationController
 
     def new
+      @sender = User.find(params[:money_sender])
     end
 
     def create
+      @sender = User.find(params[:money_sender])
+
       @amount = params[:amount]
 
       @amount = @amount.gsub('$', '').gsub(',', '')
@@ -30,9 +33,13 @@ class ChargesController < ApplicationController
         :source => params[:stripeToken],
         :description => 'Custom donation'
       )
-
+    begin
       rescue Stripe::CardError => e
         flash[:error] = e.message
         redirect_to new_charge_path
-      end
     end
+
+      UserMailer.send_payment_email(@sender).deliver
+
+    end
+  end

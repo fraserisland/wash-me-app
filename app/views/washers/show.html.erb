@@ -62,7 +62,7 @@
 
 <div>
   <h3>Pay <%= @washer.user.first_name.capitalize %></h3>
-    <%= link_to 'Send money', new_charge_path %>
+    <%= link_to 'Send money', new_charge_path(money_sender: current_user) %>
     <br>
 </div>
 
