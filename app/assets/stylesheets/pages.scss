@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
+.quote{
+  padding-bottom: 30px;
+}
+
 .quote p {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 36px;
@@ -13,96 +20,89 @@
   font-weight: 600;
 }
 
+.button_to{
+  height: 10px;
+}
+
+.become-washer{
+    position: relative;
+    top: -100px;
+    left: 700px;
+    font-family: 'Nunito Sans', sans-serif;
+  	width: 200px;
+  	height: 150px;
+  	background: black;
+    color: white;
+    font-size: 16px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.become-washer:hover{
+  transition: 0.5s;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
 .banner{
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   font-size: 24px;
   padding: 50px;
-  background-image: url(https://blog.smartthings.com/wp-content/uploads/2014/01/happy_laundry-976211.jpg);
+  background-image: url(https://njlaundromats.com/wp-content/uploads/2016/08/IMG_1515a-1200x800.jpg);
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100;
-  height: 500px;
+  height: 400px;
 }
 
 
-.form-wrapper {
-	background-color: #f6f6f6;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
-	background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
-	background-image: linear-gradient(top, #f6f6f6, #eae8e8);
-	border-color: #dedede #bababa #aaa #bababa;
-	border-style: solid;
-	border-width: 1px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
-	-moz-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
-	box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
-	margin: 100px auto;
-	overflow: hidden;
-	width: 400px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.search-container{
+  width: 590px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 60px;
 }
 
-.find-washer{
-  width: 260px;
-  height: 40px;
-  margin: 5px;
+.search-bar{
   text-align: center;
-}
+  margin: 0 auto;
+  width: 100%;
+  height: 75px;
+  padding: 0 20px;
+  border: 1px solid #000000;
+  outline: none;
+  &:focus{
+    border: 1px solid #000000;
+    transition: 0.35s ease;
+    color: inherit;
+    font-size: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    &::-webkit-input-placeholder{
+      transition: opacity 0.45s ease;
+  	  opacity: 0;
+     }
+    &::-moz-placeholder {
+      transition: opacity 0.45s ease;
+  	  opacity: 0;
+     }
+    &:-ms-placeholder {
+     transition: opacity 0.45s ease;
+  	 opacity: 0;
+     }
+   }
+ }
 
-.form-wrapper #submit {
-	background-color: #0483a0;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#31b2c3), to(#0483a0));
-	background-image: -webkit-linear-gradient(top, rgb(0, 0, 0), #f9f9f9);
-	background-image: -moz-linear-gradient(top, #31b2c3, #0483a0);
-	background-image: -ms-linear-gradient(top, #31b2c3, #0483a0);
-	background-image: -o-linear-gradient(top, #31b2c3, #0483a0);
-	background-image: linear-gradient(top, #31b2c3, #0483a0);
-	border: 1px solid #ffffff;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
-	-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
-	color: #fafafa;
-	cursor: pointer;
-	height: 40px;
-	font: 15px Arial, Helvetica;
-	text-transform: uppercase;
-	text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
-	width: 100px;
-  margin: 5px;
-}
-
-.form-wrapper #submit:hover,
-.form-wrapper #submit:focus {
-	background-color: #31b2c3;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#0483a0), to(#31b2c3));
-	background-image: -webkit-linear-gradient(top, #ffffff, #040404);
-	background-image: linear-gradient(top, #0483a0, #31b2c3);
-}
-
-.form-wrapper #submit:active {
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
-	outline: 0;
-}
-
-.form-wrapper #submit::-moz-focus-inner {
-	border: 0;
+.search-icon{
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  border: 0px;
+  top: -75px;
 }
