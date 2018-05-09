@@ -16,6 +16,7 @@
 <body style="margin: 33px">
 <% if @washers.present? %>
   <table class="table">
+		
     <thead>
       <tr>
         <th>Washer</th>
@@ -34,7 +35,7 @@
           <% if washer.user.avatar.present? %>
               <td><%= image_tag(washer.user.avatar.url(:thumb)) %><%= washer.user.first_name %> <%= washer.user.last_name %><br /></td>
             <% else %>
-              <td><%= washer.user.first_name %> <%= washer.user.last_name %></td>
+              <td><%= cl_image_tag("profile-blank.png", :width=>50, :height=>50, :crop=>"fill")%> <%= washer.user.first_name %> <%= washer.user.last_name %></td>
           <% end %>
 
           <td>$<%= washer.cost %></td>

@@ -14,10 +14,24 @@
  *= require_self
  *= require gmaps-auto-complete
  */
- button{
-  outline: none !important;
- }
 
- .margin{
-   margin: 5px;
- }
+body{
+  color:black;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: .875em;
+  line-height: 2;
+}
+
+ button{outline: none !important;}
+
+.nav-logo{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+.nav > * {
+  padding: 5px;
+  color:black;
+  font-size: 16px;
+}
