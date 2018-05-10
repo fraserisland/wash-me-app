@@ -1,5 +1,4 @@
 
-
 .washer-titles{
   font-size: 20px;
   text-align: left;
@@ -8,10 +7,13 @@
 .washer-images{
   margin-bottom: 20px;
   text-align: center;
+  width: 500px;
 }
 
 .washer-images .washer-titles{
   text-align: center;
+  padding: 20px 0px;
+  margin: 10px 40px;
 }
 
 .profile-container{
@@ -20,13 +22,16 @@
   width: 100%;
   justify-content: center;
   line-height: 3;
-  padding: 100px 0px 120px 0px;
+  padding: 50px 0px 100px 0px;
 }
 
 .profile-container div{
-  align-self: center;
   padding:2px;
   margin: 10px 40px;
+}
+
+.washer-details .washer-titles{
+  padding-top: 20px;
 }
 
 .message-money{
@@ -46,4 +51,8 @@
 div .star{
   margin-top: 0;
   margin-left:0;
+}
+
+div .washer-details{
+  padding-top: 40px;
 }
