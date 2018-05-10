@@ -1,3 +1,11 @@
-<h2>Thank you!</h2>
-<p>Your payment of <strong><%= number_to_currency(@amount * 0.01) %></strong>
- has been received.</p>
+<head>
+  <link rel="stylesheet" href="/assets/charges.scss">
+</head>
+
+<body>
+  <div class= "recieved-payment">
+    <h2>Thank you so much <%= @sender.first_name.capitalize %>!</h2>
+    <p>Your payment of <strong><%= number_to_currency(@amount * 0.01) %></strong>
+    is currently being proccessed, and will be shortly recieved.</p>
+  </div>
+</body>
