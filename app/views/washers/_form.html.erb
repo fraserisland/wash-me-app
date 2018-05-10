@@ -1,21 +1,15 @@
 <%= form_with(model: washer, local: true) do |form| %>
-  <% if washer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(washer.errors.count, "error") %> prohibited this washer from being saved:</h2>
 
-      <ul>
+<% if washer.errors.any? %>
+  <div id="error_explanation">
+  <h2><%= pluralize(washer.errors.count, "error") %> prohibited this washer from being saved:</h2>
+    <ul>
       <% washer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <!-- <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div> -->
-
+    </ul>
+  </div>
+<% end %>
 
   <div class="field">
     <%= form.label :cost, 'Cost per kg' %>
@@ -51,25 +45,14 @@
     <%= form.file_field :image %>
   </div>
 
-
   <div class="field">
-  <%= "Do you offer a Pickup/ Delivery service?" %><br>
-  <p><%= form.radio_button :delivery, "Yes!" %> True </p>
-  <p><%= form.radio_button :delivery, "No." %> False </p>
+    <%= "Do you offer a Pickup/ Delivery service?" %><br>
+    <p><%= form.radio_button :delivery, "Yes!" %> True </p>
+    <p><%= form.radio_button :delivery, "No." %> False </p>
   </div>
-
-
-  <!-- <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude %>
-  </div> -->
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  
 <% end %>

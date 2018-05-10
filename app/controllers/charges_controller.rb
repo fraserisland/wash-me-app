@@ -40,6 +40,6 @@ class ChargesController < ApplicationController
     end
 
       UserMailer.send_payment_email(@sender).deliver
-
+      
     end
   end

@@ -1,13 +1,10 @@
 class WashersController < ApplicationController
   before_action :set_washer, only: [:show, :edit, :update, :destroy]
-  # GET /washers
-  # GET /washers.json
+
   def index
     @washers = Washer.all
   end
 
-  # GET /washers/1
-  # GET /washers/1.json
   def show
     @washers= Washer.all
     @washer = Washer.find(params[:id])
@@ -24,17 +21,13 @@ class WashersController < ApplicationController
     end
   end
 
-  # GET /washers/new
   def new
     @washer = Washer.new
   end
 
-  # GET /washers/1/edit
   def edit
   end
 
-  # POST /washers
-  # POST /washers.json
   def create
     @washer = Washer.new(washer_params)
     @washer.user = current_user
@@ -49,8 +42,6 @@ class WashersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /washers/1
-  # PATCH/PUT /washers/1.json
   def update
     respond_to do |format|
       if @washer.update(washer_params)
@@ -63,8 +54,6 @@ class WashersController < ApplicationController
     end
   end
 
-  # DELETE /washers/1
-  # DELETE /washers/1.json
   def destroy
     @washer.destroy
     respond_to do |format|
@@ -74,13 +63,13 @@ class WashersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_washer
       @washer = Washer.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def washer_params
       params.require(:washer).permit(:image, :user_id, :description, :delivery, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :email, :first_name, :last_name)
     end
+    
 end

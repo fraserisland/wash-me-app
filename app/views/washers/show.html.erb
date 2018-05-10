@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
   <head>
     <meta charset="utf-8">
     <title>Profile</title>
     <link rel="stylesheet" href="/assets/washers-show.scss">
   </head>
 
-  <body>
-
-    <p id="notice"><%= notice %></p>
-
+<body>
+  <p id="notice"><%= notice %></p>
     <div class="profile-container">
-
       <div class= "washer-images">
-        <p class= "washer-titles"><%= @washer.user.first_name.capitalize %> <%= @washer.user.last_name.capitalize %></p>
-        <% if @washer.user.avatar.present? %>
-            <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
-          <% else %>
-            <%= cl_image_tag("profile-blank.png") %>
+      <p class= "washer-titles"><%= @washer.user.first_name.capitalize %> <%= @washer.user.last_name.capitalize %></p>
+      <% if @washer.user.avatar.present? %>
+        <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
+      <% else %>
+        <%= cl_image_tag("profile-blank.png") %>
+      <% end %>
+      <p class= "washer-titles">The Space</p>
+      <% if @washer.image.present? %>
+        <% @washer.image.each do |image| %>
+        <%= image_tag(image.url(:small)) %>
         <% end %>
-        <p class= "washer-titles">The Space</p>
-        <% if @washer.image.present? %>
-          <% @washer.image.each do |image| %>
-          <%= image_tag(image.url(:small)) %>
-          <% end %>
-        <% else %>
-          <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
-          <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
-          <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
+      <% else %>
+        <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
+        <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
+        <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
+      <% end %>
+    </div>
+    <div class= "washer-details">
+      <p class= "washer-titles">Cost:</p>
+      <p>$<%= @washer.cost %> per kg<p>
+      <p class= "washer-titles">Address:</p>
+      <p><%= @washer.full_address %></p>
+      <p class= "washer-titles">Pickup/Deliver: </p>
+      <p><%= @washer.delivery %></p>
+      <p class= "washer-titles">Notes:</p>
+      <% if @washer.description.present? %>
+        <p><%= @washer.description %> </p>
+      <% else %>
+        <p>No notes currently available.</p>
+      <% end %>
+      <% if @washer.nearbys(10).present? %>
+        <p class= "washer-titles">Other Nearby Washers:</p>
+        <% @washer.nearbys(10).each do |near_washer| %>
+          <p><%= link_to near_washer.address, near_washer %> (<%= near_washer.distance.round(2)%> kms)</p>
         <% end %>
-      </div>
-
-      <div class= "washer-details">
-        <p class= "washer-titles">Cost:</p>
-        <p>$<%= @washer.cost %> per kg<p>
-
-        <p class= "washer-titles">Address:</p>
-        <p><%= @washer.full_address %></p>
-
-        <p class= "washer-titles">Pickup/Deliver: </p>
-        <p><%= @washer.delivery %></p>
-
-        <p class= "washer-titles">Notes:</p>
-        <% if @washer.description.present? %>
-          <p><%= @washer.description %> </p>
-          <% else %>
-          <p>No notes currently available.</p>
-        <% end %>
-
-        <% if @washer.nearbys(10).present? %>
-          <p class= "washer-titles">Other Nearby Washers:</p>
-          <% @washer.nearbys(10).each do |near_washer| %>
-            <p><%= link_to near_washer.address, near_washer %> (<%= near_washer.distance.round(2)%> kms)</p>
-          <% end %>
-        <% end %>
-      </div>
-
-      <div class= "message-money">
-        <p><%= button_to "Send Message", new_conversation_path, :method => "get", class: "button", params: {recipient_id: @washer.user.id} %></p>
-        <p><%= button_to "Send Money", new_charge_path, :method => "get", class: "button", params: {money_sender: current_user} %></p>
-        <% if current_user == @washer.user %>
-          <% else %>
-            <p class= "rating">Rating:
-            <%= rating_for @washer, "experience", disable_after_rate: true, star_path: '/raty' %></p>
-        <% end %>
+      <% end %>
+    </div>
+    <div class= "message-money">
+      <p><%= button_to "Send Message", new_conversation_path, :method => "get", class: "button", params: {recipient_id: @washer.user.id} %></p>
+      <p><%= button_to "Send Money", new_charge_path, :method => "get", class: "button", params: {money_sender: current_user} %></p>
+      <% if current_user == @washer.user %>
+      <% else %>
+        <p class= "rating">Rating:
+        <%= rating_for @washer, "experience", disable_after_rate: true, star_path: '/raty' %></p>
+      <% end %>
      </div>
-
-
-
     </div>
   </div>
   <%= link_to 'Go Back', washers_path %>
-  </body>
+</body>
 </html>

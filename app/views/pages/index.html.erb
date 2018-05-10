@@ -7,38 +7,26 @@
 </script>
 
 <body>
-
-<div class="quote-container">
-  <div class= "quote">
-    <p>Clean clothes</p>
-    <p>Anywhere in the world</p>
+  <div class="quote-container">
+    <div class= "quote">
+      <p>Clean clothes</p>
+      <p>Anywhere in the world</p>
+    </div>
   </div>
-</div>
-
-<div>
-  <%= button_to "Become A Washer", new_washer_path, :method => "get", class:"become-washer" %>
-</div>
-
+  <div>
+    <%= button_to "Become A Washer", new_washer_path, :method => "get", class:"become-washer" %>
+  </div>
   <div class="banner">
-
     <div class="search-container">
       <div>
         <%= form_tag washers_near_you_path, method: :get do %>
         <%= text_field_tag :location, params[:location], placeholder: "FIND A WASHER", class:"search-bar"%>
       </div>
-          <%= hidden_field_tag :distance, 150 %>
+      <%= hidden_field_tag :distance, 150 %>
       <div>
-          <%= image_submit_tag("http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png", class: "search-icon")%>
+        <%= image_submit_tag("http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png", class: "search-icon")%>
       </div>
-      <% end %>
+        <% end %>
     </div>
-
   </div>
-
-<div class="">
-
-</div>
-
-
-
 </body>

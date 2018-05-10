@@ -1,24 +1,29 @@
-<%= form_tag charges_path(money_sender: @sender) do %>
 
+<head>
+  <link rel="stylesheet" href="/assets/cahrges.scss">
+</head>
 
-  <div id="error_explanation">
-      <% if flash[:error].present? %>
+<body>
+  <%= form_tag charges_path(money_sender: @sender) do %>
+  <section>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
         <p><%= flash[:error] %></p>
-      <% else %>
+    <% else %>
         <% flash[:error] == nil%>
+      </div>
     <% end %>
-  </div>
-
-  <article>
-    <%= label_tag(:amount, 'Amount to pay:') %>
-    <%= text_field_tag(:amount) %>
-  </article>
-
-  <article>
-    <%= hidden_field_tag(:stripeToken) %>
-  </article>
-  <button id='donateButton'>Send Money</button>
-<% end %>
+    <div>
+      <%= label_tag(:amount, 'Amount to pay:')%>
+      <%= text_field_tag(:amount) %>
+    </div>
+    <div>
+      <%= hidden_field_tag(:stripeToken) %>
+    </div>
+    <button class= "button" id='donateButton'>Send Money</button>
+    <% end %>
+  </section>
+</body>
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 

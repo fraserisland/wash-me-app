@@ -13,7 +13,7 @@ class Washer < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def full_address
-      "#{address}, #{zipcode}, #{city}, #{country}"
-    end
+    "#{address}, #{zipcode}, #{city}, #{country}"
+  end
 
 end

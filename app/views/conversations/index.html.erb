@@ -1,20 +1,23 @@
-<h1>All Messages</h1>
 
 
-<% if @conversations.present? %>
-
-  <% @conversations.each do |conversation| %>
+<body>
   <div>
-    <% if conversation.recipients.first == current_user %>
-      <p><%= conversation.recipients.last.first_name.capitalize %>:</p>
-      <% else %>
-        <p><%= conversation.recipients.first.first_name.capitalize %>:</p>
+    <h1>All Messages</h1>
+    <% if @conversations.present? %>
+      <% @conversations.each do |conversation| %>
+      <div class= "message-subjects">
+        <div class= "conversation-name">
+          <% if conversation.recipients.first == current_user %>
+            <p><%= conversation.recipients.last.first_name.capitalize %>:</p>
+          <% else %>
+            <p><%= conversation.recipients.first.first_name.capitalize %>:</p>
+          <% end %>
+        </div>
+        <p><%= link_to conversation.subject, conversation_path(conversation) %></p>
+      </div>
+      <% end %>
+    <% else %>
+      <p>no messages</p>
     <% end %>
-
-    <p><%= link_to conversation.subject, conversation_path(conversation) %></p>
-    
   </div>
-  <% end %>
-  <% else %>
-  <p>no messages</p>
-<% end %>
+</body>
