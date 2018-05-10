@@ -7,7 +7,7 @@
 5. Wire-Frames
 6. Entity Relationship Diagram
 7. Tools
-8. Versions
+* Versions
 
 
 1. Summary
@@ -43,7 +43,7 @@
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Profile.png)
 
 5. Project Timeline
-![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Gant-chart.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Gant-chart.erd.png)
 
 6. ERD
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/erd.png)
