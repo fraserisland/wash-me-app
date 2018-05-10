@@ -1,79 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<p id="notice"><%= notice %></p>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/assets/washers-show.scss">
+  </head>
 
-<p>
-  <strong>User:</strong>
-  <%= @washer.user.first_name %> <%= @washer.user.last_name %>
-</p>
+  <body>
 
-<p>
-  <strong>Profile Image:</strong>
-  <% if @washer.user.avatar.present? %>
-      <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
-    <% else %>
-      <%= cl_image_tag("profile-blank.png")%>
-  <% end %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Cost:</strong>
-  $<%= @washer.cost %> per kg
-</p>
+    <div class="profile-container">
+        <div class= "washer-images">
+          <p class= "washer-titles"><%= @washer.user.first_name.capitalize %> <%= @washer.user.last_name.capitalize %></p>
+          <% if @washer.user.avatar.present? %>
+              <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
+            <% else %>
+              <%= cl_image_tag("profile-blank.png") %>
+          <% end %>
+        </div>
+        <div class= "washer-images">
+          <% if @washer.image.present? %>
+          <p class= "washer-titles">The Space</p>
+            <%= image_tag(@washer.image.url(:medium)) %>
+          <% else %>
+            <%=  %>
+          <% end %>
+        </div>
+      <div>
+        <p class= "washer-titles">Cost:</p>
+        <p>$<%= @washer.cost %> per kg<p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @washer.full_address %>
-</p>
+        <p class= "washer-titles">Address:</p>
+        <p><%= @washer.full_address %></p>
 
-<p>
-  <strong>Pickup/Deliver:</strong>
-  <%= @washer.delivery %>
-</p>
+        <span class= "washer-titles">Pickup/Deliver: </span>
+        <%= @washer.delivery %></p>
 
-<p>
-  <% if @washer.description.present? %>
-    <strong>Notes:</strong>
-    <%= @washer.description %> <br />
-  <% end %>
-</p>
-
-<p style= "display: none">
-<% if current_user == @washer.user %>
-  <% else %>
-    <strong>Experience:</strong>
-      <%= rating_for @washer, "experience", disable_after_rate: true, star_path: '/raty' %>
-<% end %>
-</p>
-
-<p>
-  <strong>Washer Image:</strong>
-  <% if @washer.image.present? %>
-      <%= image_tag(@washer.image.url(:medium)) %> <br/>
-    <%else%>
-      <%= "none available" %>
-  <% end %>
-</p>
-
-<div>
-  <h3>Contact <%= @washer.user.first_name.capitalize %></h3>
-  <p>Message <%= link_to @washer.user.first_name.capitalize, new_conversation_path(recipient_id: @washer.user.id) %></p>
-  <p>Email: <%= @washer.user.email %></p>
-</div>
-
-<div>
-  <h3>Pay <%= @washer.user.first_name.capitalize %></h3>
-    <%= link_to 'Send money', new_charge_path(money_sender: current_user) %>
-    <br>
-</div>
-
-<% if @washer.nearbys(10).present? %>
-      <ul>
-        <strong>Other Nearby Washers:</strong>
-        <% @washer.nearbys(10).each do |near_washer| %>
-          <li><%= link_to near_washer.address, near_washer %> (<%= near_washer.distance.round(2)%> kms)</li>
+        <% if @washer.description.present? %>
+          <p class= "washer-titles">Notes:</p>
+          <p><%= @washer.description %> </p>
         <% end %>
-      </ul>
-<% end %>
 
+        <% if @washer.nearbys(10).present? %>
+          <p class= "washer-titles">Other Nearby Washers:</p>
+          <% @washer.nearbys(10).each do |near_washer| %>
+            <p><%= link_to near_washer.address, near_washer %> (<%= near_washer.distance.round(2)%> kms)</p>
+          <% end %>
+        <% end %>
+      </div>
 
-<%= link_to 'Go Back', washers_path %>
+      <div class= "message-money">
+        <p><%= button_to "Send Message", new_conversation_path, :method => "get", class: "button", params: {recipient_id: @washer.user.id} %></p>
+        <p><%= button_to "Send Money", new_charge_path, :method => "get", class: "button", params: {money_sender: current_user} %></p>
+        <% if current_user == @washer.user %>
+          <% else %>
+            <p class= "rating">Rating:
+            <%= rating_for @washer, "experience", disable_after_rate: true, star_path: '/raty' %></p>
+        <% end %>
+     </div>
+    </div>
+  </div>
+  <%= link_to 'Go Back', washers_path %>
+  </body>
+</html>
