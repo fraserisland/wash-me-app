@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="/assets/washers-show.scss">
   </head>
 
+
 <body>
   <p id="notice"><%= notice %></p>
     <div class="profile-container">
       <div id= "washer-images">
-      <h2><%= @washer.user.first_name.capitalize %> <%= @washer.user.last_name.capitalize %></h2>
+      <div class= "name-wrapper">
+        <h2 class= "bubbles"><%= @washer.user.first_name.capitalize %> <%= @washer.user.last_name.capitalize %></h2>
+      </div>
       <% if @washer.user.avatar.present? %>
         <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
       <% else %>
@@ -59,4 +62,37 @@
   </div>
   <%= link_to 'Go Back', washers_path %>
 </body>
+
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+
+  var bArray = [];
+  var sArray = [4,6,8,10];
+
+  for (var i = 0; i < $('.bubbles').width(); i++) {
+      bArray.push(i);
+  }
+
+  function randomValue(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  setInterval(function(){
+
+      var size = randomValue(sArray);
+      $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+      $('.individual-bubble').animate({
+          'bottom': '100%',
+          'opacity' : '-=0.7'
+      }, 3000, function(){
+          $(this).remove()
+      }
+      );
+
+
+  }, 350);
+
+});
+</script>
 </html>

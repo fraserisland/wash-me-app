@@ -34,6 +34,7 @@ body{
 
 #navbar{
  overflow: hidden;
+ z-index: 3;
 }
 
 .sticky {
@@ -104,7 +105,7 @@ body{
   &:hover{
     background: black;
     cursor: pointer;
-    color:white;
+    color:rgba(40, 112, 184,0.8);
     &:before{
       transform: translateX(300px)  skewX(-15deg);
       opacity: 0.6;
