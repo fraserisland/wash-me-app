@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   def set_role
     add_role :customer
-    UserMailer.send_signup_email(self).deliver
+    # UserMailer.send_signup_email(self).deliver
   end
 
   def can_update?(washer)
