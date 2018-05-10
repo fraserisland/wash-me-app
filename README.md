@@ -21,9 +21,9 @@
 
 
 3. Wire-Frames
-```html
+
   <img src= "/assets/wireframes/Home.png" width="350"/>
-```
+
 ![alt text](/assets/wireframes/Home.png)
 ![alt text](/assets/wireframes/Near-you.png)
 ![alt text](/assets/wireframes/New-message.png)
