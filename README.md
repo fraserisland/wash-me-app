@@ -6,7 +6,7 @@
 4. Workflow Diagram
 5. Entity Relationship Diagram
 6. Tools
-
+* Extras
 
 
 1. Summary
@@ -31,19 +31,19 @@
 4. Workflow Diagram
 
 5. ERD
-![alt text](/assets/wireframes/erd.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/erd.png)
 
 6. List of Tools Used
-• Github - Version control
-• Draw.io - ERD
-• Postgresql - Database
-• Trello- User Stories
-• Cloudinary - Cloud Storage
-• Heroku - Webhosting
-• Gmail - Sending emails
-• Stripe - Secure Payments
-• Balsamiq - Wireframing
-• Google Maps API
+* Github - Version control
+* Draw.io - ERD
+* Postgresql - Database
+* Trello- User Stories
+* Cloudinary - Cloud Storage
+* Heroku - Webhosting
+* Gmail - Sending emails
+* Stripe - Secure Payments
+* Balsamiq - Wireframing
+* Google Maps API
 
 
 This README would normally document whatever steps are necessary to get the
