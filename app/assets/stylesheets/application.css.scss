@@ -32,17 +32,35 @@ body{
   padding-top: 20px
 }
 
-.nav{
-  padding: 10px 20px;
+#navbar{
+ overflow: hidden;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+  background-color: rgba(166, 166, 166, 0.1);
+}
+
+.sticky + .body {
+  padding-top: 60px;
+}
+
+.nav{
+  padding: 16px 20px;
+  overflow: hidden;
+}
+.navbar-wrapper{
+  height: 86px;
+  padding: 0px;
+}
 
 .nav > * {
   padding: 5px;
   font-size: 16px;
 }
-
-// Mixin below used to center the button. If using in production, remove the mixin and add position relative or absolute to button.
 
 .button{
   background: white;
@@ -97,9 +115,6 @@ body{
     }
   }
 }
-
-
-
 
 footer {
   margin-top: 50px;

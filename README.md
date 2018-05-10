@@ -18,7 +18,7 @@
   Here's a brief on how it works. Wash-me's can enter a location of their choice, for example, it may be where they live, or somewhere they're travelling in the near future. The application will generate an interactive map which shows all the nearby Washers. These Washers are rated, can advertise extras, pickup, deliver, wash at your house, and more… It is all up to the Wash-me's/Washers. Nonetheless at the end of each day, whoever wants their clothes washed, will have them washed.
 
 2. User Stories
-
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/trello.png)
 
 3. Wire-Frames
 
@@ -46,25 +46,6 @@
 * Google Maps API
 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
   Ruby 2.3.4
   Rails 5.2.0
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

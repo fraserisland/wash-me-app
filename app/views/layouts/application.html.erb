@@ -20,47 +20,50 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+
   </head>
 
   <body>
 
-  <ul class="nav nav-justified">
-    <li>
-      <p class="nav-logo">WASH ME</p>
-    </li>
-    <li class="nav-item">
-      <%= button_to 'Home', root_path, :method => "get", class: "button"%>
-    </li>
-    <% if user_signed_in? %>
-    <li class="nav-item">
-      <%= button_to 'Messages', conversations_path, :method => "get", class: "button"%>
-    </li>
-    <li class="nav-item">
-      <%= button_to 'Edit Profile', edit_user_registration_path, :method => "get", class: "button"%>
-    </li>
-    <li class="nav-item">
-    <%= button_to 'Logout', destroy_user_session_path, method: :delete, :method => "delete", class: "button" %>
-    </li>
-      <% if current_user.has_role?(:admin) %>
+<div class="navbar-wrapper">
+  <div id= "navbar">
+    <ul class="nav nav-justified">
       <li>
-        <%= button_to 'All Washers', washers_path, :method => "get", class: "button"%>
+        <p class="nav-logo">WASH ME</p>
       </li>
-      <%end%>
-      <% else %>
-    <li class="nav-item">
-      <%= button_to 'Register', new_user_registration_path, :method => "get", class: "button"%>
-    </li>
-    <li class="nav-item">
-      <%= button_to 'Login', new_user_session_path, :method => "get", class: "button"%>
-    </li>
-    <% end %>
-
-
-  </ul>
+      <li class="nav-item">
+        <%= button_to 'Home', root_path, :method => "get", class: "button"%>
+      </li>
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= button_to 'Messages', conversations_path, :method => "get", class: "button"%>
+      </li>
+      <li class="nav-item">
+        <%= button_to 'Edit Profile', edit_user_registration_path, :method => "get", class: "button"%>
+      </li>
+      <li class="nav-item">
+      <%= button_to 'Logout', destroy_user_session_path, method: :delete, :method => "delete", class: "button" %>
+      </li>
+        <% if current_user.has_role?(:admin) %>
+        <li>
+          <%= button_to 'All Washers', washers_path, :method => "get", class: "button"%>
+        </li>
+        <%end%>
+        <% else %>
+      <li class="nav-item">
+        <%= button_to 'Register', new_user_registration_path, :method => "get", class: "button"%>
+      </li>
+      <li class="nav-item">
+        <%= button_to 'Login', new_user_session_path, :method => "get", class: "button"%>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    
+
     <%= yield %>
 
 
@@ -111,6 +114,22 @@
         All Rights Reserved © 2016 | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
     </div>
   </footer>
+
+  <script type="text/javascript">
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 
   </body>
 </html>

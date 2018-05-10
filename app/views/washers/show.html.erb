@@ -9,7 +9,7 @@
 <body>
   <p id="notice"><%= notice %></p>
     <div class="profile-container">
-      <div class= "washer-images">
+      <div id= "washer-images">
       <p class= "washer-titles"><%= @washer.user.first_name.capitalize %> <%= @washer.user.last_name.capitalize %></p>
       <% if @washer.user.avatar.present? %>
         <%= image_tag(@washer.user.avatar.url(:medium)) %> <br />
