@@ -22,13 +22,11 @@
 
 3. Wire-Frames
 
-  <img src= "/assets/wireframes/Home.png" width="350"/>
-
-![alt text](/assets/wireframes/Home.png)
-![alt text](/assets/wireframes/Near-you.png)
-![alt text](/assets/wireframes/New-message.png)
-![alt text](/assets/wireframes/Paying.png)
-![alt text](/assets/wireframes/Profile.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Home.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Near-you.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/New-message.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Paying.png)
+![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Profile.png)
 
 4. Workflow Diagram
 
