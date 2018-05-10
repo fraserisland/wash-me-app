@@ -18,9 +18,7 @@
       <% end %>
       <p class= "washer-titles">The Space</p>
       <% if @washer.image.present? %>
-        <% @washer.image.each do |image| %>
-        <%= image_tag(image.url(:small)) %>
-        <% end %>
+        <%= image_tag(@washer.image.url(:small)) %>
       <% else %>
         <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
         <%= cl_image_tag("washing-machine-drawing-9.gif", :width=>220, :height=>220,  :crop=>"fit") %>
