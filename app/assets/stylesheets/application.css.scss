@@ -41,7 +41,9 @@ body{
   top: 0;
   width: 100%;
   transition: 0.5s;
-  background-color: rgba(166, 166, 166, 0.1);
+  background-color: white;
+  border-bottom: 5px solid rgba(138, 138, 138, 0.3);
+  border-top: 5px solid rgba(138, 138, 138, 0.3);
 }
 
 .sticky + .body {

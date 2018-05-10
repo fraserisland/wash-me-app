@@ -3,8 +3,9 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
+  align-items: flex-start;
   line-height: 3;
-  padding: 50px 0px 100px 0px;
+  padding: 0px 0px 100px 0px;
 }
 
 .profile-container div{
@@ -19,7 +20,7 @@
 }
 
 #washer-images{
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   text-align: center;
   width: 500px;
   margin-left: 0px;
@@ -33,6 +34,7 @@
 
 .washer-details p{
   line-height: 2;
+  padding-top: 0px;
 }
 
 .message-money{
@@ -52,8 +54,4 @@
 div .star{
   margin-top: 0;
   margin: auto;
-}
-
-div .washer-details{
-  padding-top: 40px;
 }
