@@ -1,0 +1,866 @@
+/* line 5, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/charges.scss */
+section {
+  text-align: center;
+  margin: 100px 0px 150px 0px;
+  font-size: 20px;
+}
+
+/* line 11, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/charges.scss */
+section div {
+  margin: 20px;
+  line-height: 3;
+}
+
+/* line 16, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/charges.scss */
+.recieved-payment {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+/* line 4, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+body div {
+  padding: 0px 20px;
+  align-items: center;
+}
+
+/* line 9, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.center {
+  margin: auto;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+/* line 15, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.text-fields-holder {
+  width: 50%;
+  height: 50%;
+  border-top: 5px solid grey;
+  border-bottom: 5px solid grey;
+  margin: 80px 0px 200px 0px;
+}
+
+/* line 23, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.text-fields-holder h1 {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 28, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* line 32, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.conversation-name {
+  padding-left: 0px;
+}
+
+/* line 36, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.conversation-name p {
+  font-size: 16px;
+}
+
+/* line 40, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.button {
+  margin-bottom: 20px;
+}
+
+/* line 44, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.message-form {
+  margin-top: 1.5rem;
+}
+
+/* line 48, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+div textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+  min-height: 150px;
+  margin-bottom: 15px;
+}
+
+/* line 59, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/conversations.scss */
+.message-subjects {
+  border-bottom: 5px solid grey;
+  width: 50%;
+  margin-bottom: 20px;
+}
+/* line 1, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/devise.scss */
+.sign-in {
+  text-align: center;
+}
+
+/* line 5, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/devise.scss */
+.text-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* line 13, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/devise.scss */
+.form-control {
+  width: 200px;
+  text-align: center;
+}
+
+/* line 18, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/devise.scss */
+.custom-file {
+  border-radius: 4px;
+}
+
+/* line 22, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/devise.scss */
+.custom-file:hover {
+  cursor: pointer;
+}
+/* line 4, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.quote {
+  padding-bottom: 30px;
+  padding-left: 20px;
+}
+
+/* line 9, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.quote p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 36px;
+  line-height: 1.33333;
+  font-weight: 200;
+}
+
+/* line 16, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.quote p:first-child {
+  font-weight: 600;
+}
+
+/* line 20, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.button_to {
+  height: 10px;
+}
+
+/* line 24, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.become-washer {
+  position: relative;
+  top: -100px;
+  right: -1000px;
+  font-family: 'Nunito Sans', sans-serif;
+  width: 200px;
+  height: 150px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+/* line 38, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.become-washer:hover {
+  transition: 0.5s;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* line 44, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 50px;
+  background-image: url(https://njlaundromats.com/wp-content/uploads/2016/08/IMG_1515a-1200x800.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100;
+  height: 400px;
+  margin-bottom: 200px;
+}
+
+/* line 63, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-container {
+  width: 590px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+/* line 70, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-bar {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 75px;
+  padding: 0 20px;
+  border: 1px solid #000000;
+  outline: none;
+}
+/* line 78, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-bar:focus {
+  border: 1px solid #000000;
+  transition: 0.35s ease;
+  color: inherit;
+  font-size: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+/* line 84, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+/* line 88, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+/* line 92, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+/* line 99, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/pages.scss */
+.search-icon {
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  border: 0px;
+  top: -75px;
+}
+/* line 1, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 26, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 31, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 36, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 40, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 46, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 53, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 63, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 69, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 2, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.name-wrapper {
+  margin-left: 100px !important;
+}
+
+/* line 6, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.bubbles {
+  display: inline-block;
+  font-family: arial;
+  position: relative;
+}
+
+/* line 13, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.individual-bubble {
+  position: absolute;
+  text-align: center;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: rgba(40, 112, 184, 0.8);
+  z-index: 1;
+}
+
+/* line 23, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 3;
+  padding: 0px 0px 100px 0px;
+}
+
+/* line 33, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.profile-container div {
+  padding: 2px;
+  margin: 10px 100px 10px 00px;
+}
+
+/* line 38, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.washer-titles {
+  padding-top: 15px;
+  font-size: 20px;
+  text-align: left;
+}
+
+/* line 44, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+#washer-images {
+  margin-bottom: 0px;
+  text-align: center;
+  width: 500px;
+  margin-left: 0px;
+}
+
+/* line 51, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+#washer-images .washer-titles {
+  text-align: center;
+  padding: 20px 0px;
+  margin: 10px 0px;
+}
+
+/* line 57, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.washer-details p {
+  line-height: 2;
+  padding-top: 0px;
+}
+
+/* line 62, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.message-money {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 67, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.message-money p {
+  padding: 10px;
+}
+
+/* line 71, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+.rating {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* line 76, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers-show.scss */
+div .star {
+  margin-top: 0;
+  margin: auto;
+}
+/* line 4, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+body {
+  margin: 20px;
+}
+
+/* line 8, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.text-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* line 18, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.form-control {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 23, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.button-sml {
+  background: white;
+  color: black;
+  width: 100px;
+  height: 40px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: .8s;
+  overflow: hidden;
+}
+/* line 34, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.button-sml:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+/* line 47, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.button-sml:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+/* line 60, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.button-sml:hover {
+  background: black;
+  cursor: pointer;
+  color: white;
+}
+/* line 64, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.button-sml:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: .7s;
+}
+/* line 69, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+.button-sml:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: .7s;
+}
+
+/* line 77, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+#map {
+  height: 100%;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+/* line 83, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/washers.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+ */
+/* line 20, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+body {
+  color: black;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: .875em;
+  line-height: 2;
+}
+
+/* line 27, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+button {
+  outline: none !important;
+}
+
+/* line 29, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.nav-logo {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  padding-top: 20px;
+}
+
+/* line 36, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+#navbar {
+  overflow: hidden;
+  z-index: 3;
+}
+
+/* line 41, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+  background-color: white;
+  border-bottom: 5px solid rgba(138, 138, 138, 0.3);
+  border-top: 5px solid rgba(138, 138, 138, 0.3);
+}
+
+/* line 51, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.sticky + .body {
+  padding-top: 60px;
+}
+
+/* line 55, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.nav {
+  padding: 16px 20px;
+  overflow: hidden;
+}
+
+/* line 59, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.navbar-wrapper {
+  height: 86px;
+  padding: 0px;
+}
+
+/* line 64, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.nav > * {
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* line 69, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.button {
+  background: white;
+  color: black;
+  width: 150px;
+  height: 60px;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: .8s;
+  overflow: hidden;
+}
+/* line 80, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .5;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+/* line 93, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+/* line 106, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.button:hover {
+  background: black;
+  cursor: pointer;
+  color: rgba(40, 112, 184, 0.8);
+}
+/* line 110, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: .7s;
+}
+/* line 115, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: .7s;
+}
+
+/* line 123, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-radius: 4px;
+  background: #191919;
+  color: #fff;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+/* line 132, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 138, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered .footer-logo {
+  width: 20%;
+}
+/* line 141, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered .footer-logo img.logo {
+  padding: 30px 20px 10px 20px;
+  max-width: 100%;
+}
+/* line 147, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered .footer-contact {
+  width: 20%;
+}
+/* line 151, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered .footer-navigation {
+  width: 60%;
+}
+/* line 154, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered .footer-navigation .footer-links-holder {
+  width: 33.33333%;
+  position: relative;
+  float: left;
+  margin: 0;
+}
+/* line 160, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .centered .footer-navigation .footer-links-holder .footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
+}
+/* line 170, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer .bottom-bar {
+  position: relative;
+  text-align: center;
+  font-size: .8em;
+  background: #000;
+  padding: 15px 0;
+}
+
+/* Responsive Tablet Sizes */
+@media only screen and (max-width: 749px) {
+  /* line 182, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered {
+    flex-wrap: wrap;
+  }
+  /* line 184, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-logo {
+    max-width: 250px;
+    width: 50%;
+  }
+  /* line 188, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-contact {
+    width: 50%;
+    padding: 0 20px;
+  }
+  /* line 192, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation {
+    width: 100%;
+  }
+  /* line 194, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder {
+    padding: 0 20px;
+  }
+}
+/* Responsive Mobile Sizes */
+@media only screen and (max-width: 500px) {
+  /* line 206, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-logo {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* line 211, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-contact {
+    width: 100%;
+  }
+  /* line 217, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder {
+    width: 100%;
+    padding: 0;
+  }
+  /* line 221, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder h3 {
+    margin: 0;
+    padding: 10px 20px;
+    border-top: #000 1px solid;
+    cursor: pointer;
+    /* Down Arrows */
+  }
+  /* line 228, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder h3::after {
+    float: right;
+    margin-right: 10px;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 7px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: transform .5s;
+    transition: transform .5s;
+  }
+  /* line 248, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder .footer-links {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  /* line 257, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder.active h3::after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  /* line 265, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+  footer .centered .footer-navigation .footer-links-holder.active .footer-links {
+    max-height: 10000px;
+  }
+}
+/* Social Icons */
+/* line 276, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.social {
+  text-align: center;
+}
+/* line 278, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.social a {
+  display: inline-block;
+  padding: 7px;
+  width: 35px;
+  height: 35px;
+  margin: 0 2px;
+  background: #fff;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+/* line 287, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.social a:hover {
+  background: #65c2ed;
+}
+/* line 290, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.social a.linkedin {
+  padding: 4px;
+}
+/* line 294, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.social a svg .face, .social a svg .twit, .social a svg .link {
+  fill: #000;
+}
+
+/* Typography */
+/* line 303, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer h3 {
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: 0;
+}
+/* line 309, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer p, footer li {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 10px 0;
+}
+/* line 315, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color .5s, background .5s;
+  transition: color .5s, background .5s;
+}
+/* line 320, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+footer a:hover {
+  color: #616161;
+  text-decoration: none;
+}
+
+/* Misc CSS */
+/* line 329, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+.clearfix:before, .clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  clear: both;
+}
+
+/* line 341, /Users/frasermaccy/Program/Coding/railsprac/wash-me/app/assets/stylesheets/application.css.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@import url(jquery-ui-1.8.16.custom.css);
+/* line 3, /Users/frasermaccy/.rvm/gems/ruby-2.3.4/gems/gmaps-autocomplete-rails-0.3.1/vendor/assets/stylesheets/gmaps-auto-complete.scss */
+#gmaps-canvas {
+  border: 1px solid #999;
+  -moz-box-shadow: 0px 0px 5px #ccc;
+  -webkit-box-shadow: 0px 0px 5px #ccc;
+  box-shadow: 0px 0px 5px #ccc;
+  height: 400px;
+}
+
+/* line 11, /Users/frasermaccy/.rvm/gems/ruby-2.3.4/gems/gmaps-autocomplete-rails-0.3.1/vendor/assets/stylesheets/gmaps-auto-complete.scss */
+#gmaps-error {
+  color: #cc0000;
+}
