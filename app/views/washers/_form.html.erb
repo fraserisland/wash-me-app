@@ -1,5 +1,6 @@
 <%= form_with(model: washer, local: true) do |form| %>
 
+
 <% if washer.errors.any? %>
   <div id="error_explanation">
   <h2><%= pluralize(washer.errors.count, "error") %> prohibited this washer from being saved:</h2>
@@ -13,27 +14,27 @@
 
   <div class="field">
     <%= form.label :cost, 'Cost per kg' %>
-    <%= form.text_field :cost %>
+    <%= form.text_field :cost, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :zipcode %>
-    <%= form.text_field :zipcode %>
+    <%= form.text_field :zipcode, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :country %>
-    <%= form.text_field :country %>
+    <%= form.text_field :country, class: "form-control" %>
   </div>
 
   <div class="field">
@@ -42,7 +43,7 @@
   </div>
 
   <div class="field">
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: "custom-file" %>
   </div>
 
   <div class="field">
@@ -51,8 +52,8 @@
     <p><%= form.radio_button :delivery, "No." %> False </p>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class= "action">
+    <%= form.submit "Create Washer", class: "button" %>
   </div>
-  
+
 <% end %>
