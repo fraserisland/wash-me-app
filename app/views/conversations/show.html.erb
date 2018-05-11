@@ -15,5 +15,6 @@
   <div>
     <%= text_area_tag :body %>
   </div>
-  <%= submit_tag %>
+  <p><%=  link_to "profile", washer_path(id: @washer_id) %></p>
+  <%= submit_tag "Send Message", class:"button" %>
 <% end %>
