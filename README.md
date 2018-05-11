@@ -1,14 +1,14 @@
 # README
 
-**1. Summary
-2. Link To App
-3. Installation
-4. User Stories
-5. Project Timeline
-6. Wire-Frames
-7. Entity Relationship Diagram
-8. Tools
-* Versions**
+**1. Summary**
+**2. Link To App**
+**3. Installation**
+**4. User Stories**
+**5. Project Timeline**
+**6. Wire-Frames**
+**7. Entity Relationship Diagram**
+**8. Tools
+** Versions**
 
 **1. Summary**
 
@@ -30,10 +30,15 @@
   Run bundle install in terminal.
   Run rails db:create db:migrate in terminal.
   Create a .env file in the root of the directory, then add your own ENV variables :
+  
   STRIPE_PUBLISHABLE_KEY=XXXX
+
   STRIPE_SECRET_KEY=XXXX
+
   POSTGRES_PASSWORD=XXXX
+
   GMAIL_USERNAME=XXXX
+
   GMAIL_PASSWORD=XXXX
 
 **4. User Stories**
