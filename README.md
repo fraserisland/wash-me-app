@@ -14,9 +14,13 @@
 
 **7. Entity Relationship Diagram**
 
-**8. Tools
+**8. Tools**
 
-** Versions**
+**Versions**
+
+* Github repo Link
+
+* https://github.com/fraserisland/wash-me-app
 
 **1. Summary**
 
@@ -54,11 +58,15 @@
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/trello.png)
 
 **5. Wire-Frames**
-
+* Home Page
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Home.png)
+* Near You
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Near-you.png)
+* New Message
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/New-message.png)
+* Paying
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Paying.png)
+* Profile
 ![alt text](https://github.com/fraserisland/wash-me-app/blob/master/app/wireframes/Profile.png)
 
 **6. Project Timeline**
@@ -86,4 +94,5 @@
 **9. Ruby version**
 
   Ruby 2.3.4
+
   Rails 5.2.0
