@@ -9,7 +9,7 @@ class WashersController < ApplicationController
     @washers= Washer.all
     @washer = Washer.find(params[:id])
   end
-
+ 
   def near_you
       @washers = Washer.all
     if params[:location].present?
