@@ -21,7 +21,7 @@
         <td>$<%= washer.cost %></td>
         <td><%= washer.full_address %></td>
         <td><%= link_to 'Details', washer %></td>
-        <% if current_user.has_role?(:admin)%>
+        <% if current_user.has_role?(:admin) || washer.user == current_user %>
             <td><%= link_to 'Edit', edit_washer_path(washer) %></td>
             <td><%= link_to 'Destroy', washer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <%end%>

@@ -26,6 +26,7 @@
         <li class="nav-item">
           <%= button_to 'Home', root_path, :method => "get", class: "button"%>
         </li>
+        
         <% if user_signed_in? %>
         <li class="nav-item">
           <%= button_to 'Messages', conversations_path, :method => "get", class: "button"%>
@@ -36,11 +37,21 @@
         <li class="nav-item">
         <%= button_to 'Logout', destroy_user_session_path, method: :delete, :method => "delete", class: "button" %>
         </li>
+
           <% if current_user.has_role?(:admin) %>
           <li>
-            <%= button_to 'All Washers', washers_path, :method => "get", class: "button"%>
+            <%= button_to 'Manage Washers', washers_path, :method => "get", class: "button" %>
           </li>
+            <% elsif current_user.washers.present? %>
+          <li>
+            <%= button_to 'My Washers', washers_path, :method => "get", class: "button" %>
+          </li>
+            <% else %>
+            <li>
+              <%= button_to 'Be A Washer', new_washer_path, :method => "get", class: "button" %>
+            </li>
           <%end%>
+
           <% else %>
         <li class="nav-item">
           <%= button_to 'Register', new_user_registration_path, :method => "get", class: "button"%>

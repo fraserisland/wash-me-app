@@ -2,14 +2,18 @@ class WashersController < ApplicationController
   before_action :set_washer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @washers = Washer.all
+    if current_user.has_role?(:admin)
+      @washers = Washer.all
+    else
+      @washers = current_user.washers
+    end
   end
 
   def show
-    @washers= Washer.all
+    @washers = Washer.all
     @washer = Washer.find(params[:id])
   end
- 
+
   def near_you
       @washers = Washer.all
     if params[:location].present?
