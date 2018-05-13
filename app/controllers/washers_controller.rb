@@ -69,7 +69,7 @@ class WashersController < ApplicationController
     end
 
     def washer_params
-      params.require(:washer).permit(:image, :user_id, :description, :delivery, :cost, :address, :city, :country, :zipcode, :latitude, :longitude, :email, :first_name, :last_name)
+      params.require(:washer).permit(:image, :user_id, :description, :delivery, :cost, :address, :latitude, :longitude, :email, :first_name, :last_name)
     end
-    
+
 end
