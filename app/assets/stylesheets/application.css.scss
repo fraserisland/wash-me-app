@@ -54,6 +54,7 @@ body{
   padding: 16px 20px;
   overflow: hidden;
 }
+
 .navbar-wrapper{
   height: 86px;
   padding: 0px;
@@ -186,7 +187,7 @@ footer {
 
 
 /* Responsive Tablet Sizes */
-@media only screen and (max-width: 749px) {
+@media only screen and (max-width: 789px) {
   footer {
     .centered {
       flex-wrap:wrap;
@@ -206,6 +207,11 @@ footer {
       }
     }
   }
+
+  .nav{
+    height: 160px;
+  }
+
 }
 
 /* Responsive Mobile Sizes */
@@ -279,6 +285,10 @@ footer {
       }
     }
   }
+
+  .nav{
+    height: 300px;
+  }
 }
 
 /* Social Icons */
@@ -351,4 +361,5 @@ footer {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
 }
